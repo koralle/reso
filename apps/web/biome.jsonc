@@ -45,6 +45,19 @@
   },
   "overrides": [
     {
+      "includes": ["src/routeTree.gen.ts"],
+      "linter": {
+        "rules": {
+          "suspicious": {
+            "noExplicitAny": "off"
+          },
+          "correctness": {
+            "noUnusedImports": "off"
+          }
+        }
+      }
+    },
+    {
       "includes": ["worker-configuration.d.ts"],
       "linter": {
         "rules": {
