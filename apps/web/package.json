@@ -15,12 +15,15 @@
   },
   "dependencies": {
     "@reso/ui": "workspace:*",
+    "@tanstack/react-router": "^1.141.8",
+    "@tanstack/react-router-devtools": "^1.141.8",
     "react": "catalog:",
     "react-dom": "catalog:"
   },
   "devDependencies": {
     "@biomejs/biome": "catalog:",
     "@cloudflare/vite-plugin": "^1.19.0",
+    "@tanstack/router-plugin": "^1.142.0",
     "@types/react": "catalog:",
     "@types/react-dom": "catalog:",
     "@typescript/native-preview": "catalog:",
