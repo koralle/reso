@@ -1,4 +1,4 @@
-import { Text, VStack } from "@reso/ui";
+import { Center, Text, VStack } from "@reso/ui";
 import { createFileRoute } from "@tanstack/react-router";
 
 export const Route = createFileRoute("/")({
@@ -8,7 +8,15 @@ export const Route = createFileRoute("/")({
 function RouteComponent() {
   return (
     <VStack>
-      <Text>Reso</Text>
+      <Center>
+        <VStack>
+          <Text>デバイスピクセル比: {window.devicePixelRatio}</Text>
+          <Text>{window.screen.width}</Text>
+          <Text>{window.screen.height}</Text>
+          <Text>{window.innerWidth}</Text>
+          <Text>{window.innerHeight}</Text>
+        </VStack>
+      </Center>
     </VStack>
   );
 }
