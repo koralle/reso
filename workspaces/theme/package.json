@@ -1,0 +1,21 @@
+{
+  "name": "@reso/theme",
+  "version": "0.1.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "check": "biome check .",
+    "fix": "biome check . --fix",
+    "typecheck": "tsgo --noEmit"
+  },
+  "dependencies": {
+    "@yamada-ui/react": "^2"
+  },
+  "devDependencies": {
+    "@biomejs/biome": "catalog:",
+    "@typescript/native-preview": "catalog:"
+  },
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}

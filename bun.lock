@@ -15,6 +15,7 @@
       "name": "@reso/web",
       "version": "0.1.0",
       "dependencies": {
+        "@reso/theme": "workspace:*",
         "@reso/ui": "workspace:*",
         "@tanstack/react-router": "^1.141.8",
         "@tanstack/react-router-devtools": "^1.141.8",
@@ -31,6 +32,17 @@
         "@vitejs/plugin-react-swc": "^4.0.0",
         "vite": "^7.1.2",
         "wrangler": "^4.56.0",
+      },
+    },
+    "workspaces/theme": {
+      "name": "@reso/theme",
+      "version": "1.0.0",
+      "dependencies": {
+        "@yamada-ui/react": "^2",
+      },
+      "devDependencies": {
+        "@biomejs/biome": "catalog:",
+        "@typescript/native-preview": "catalog:",
       },
     },
     "workspaces/ui": {
@@ -339,6 +351,8 @@
     "@poppinss/exception": ["@poppinss/exception@1.2.3", "", {}, "sha512-dCED+QRChTVatE9ibtoaxc+WkdzOSjYTKi/+uacHWIsfodVfpsueo3+DKpgU5Px8qXjgmXkSvhXvSCz3fnP9lw=="],
 
     "@remix-run/node-fetch-server": ["@remix-run/node-fetch-server@0.8.1", "", {}, "sha512-J1dev372wtJqmqn9U/qbpbZxbJSQrogNN2+Qv1lKlpATpe/WQ9aCZfl/xSb9d2Rgh1IyLSvNxZAXPZxruO6Xig=="],
+
+    "@reso/theme": ["@reso/theme@workspace:workspaces/theme"],
 
     "@reso/ui": ["@reso/ui@workspace:workspaces/ui"],
 
