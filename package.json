@@ -16,7 +16,9 @@
       "react-dom": "19.2.3"
     }
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "@yamada-ui/cli": "^2.0.5"
+  },
   "peerDependencies": {},
   "dependencies": {
     "lefthook": "^2.0.12"
