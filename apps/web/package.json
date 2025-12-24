@@ -4,6 +4,7 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
+    "prepare": "panda codegen",
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "bun run build && vite preview",
@@ -14,7 +15,6 @@
     "typecheck": "tsgo --noEmit"
   },
   "dependencies": {
-    "@reso/ui": "workspace:*",
     "@tanstack/react-router": "^1.141.8",
     "@tanstack/react-router-devtools": "^1.141.8",
     "react": "catalog:",
