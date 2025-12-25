@@ -8,6 +8,7 @@ const card = sva({
       display: "grid",
       padding: 8,
       rounded: "8px",
+      gap: 2,
       backgroundColor: "oklch(0.9757 0.0017 247.84)",
       border: "1px solid oklch(0.9276 0.0058 264.53)",
     },
@@ -17,7 +18,7 @@ const card = sva({
       alignItems: "center",
       fontSize: "0.875rem",
       fontWeight: "bold",
-      gap: 2,
+      gap: 3,
     },
     body: {
       fontSize: "3rem",
