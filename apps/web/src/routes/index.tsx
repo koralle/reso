@@ -1,5 +1,5 @@
 import { createFileRoute } from "@tanstack/react-router";
-import { Monitor, Palette, Pointer, Scan } from "lucide-react";
+import { Monitor, Palette, Pointer, Ratio, RotateCcwSquare, Scan } from "lucide-react";
 import type { HTMLProps, ReactNode } from "react";
 import { css } from "../../styled-system/css";
 import { Card } from "../components/card/card.recipe";
@@ -30,7 +30,10 @@ function RouteComponent() {
     >
       <MainContentContainer>
         <Card.Root>
-          <Card.Header>PIXEL RATIO</Card.Header>
+          <Card.Header>
+            <Ratio strokeWidth={2.25} />
+            PIXEL RATIO
+          </Card.Header>
           <Card.Body>{devicePixelRatio}</Card.Body>
           <Card.Footer>devicePixelRatio</Card.Footer>
         </Card.Root>
@@ -38,7 +41,7 @@ function RouteComponent() {
         <Card.Root>
           <Card.Header>
             <Scan strokeWidth={2.25} />
-            VIEWPORT
+            <span className={css({ color: "primary" })}>VIEWPORT</span>
           </Card.Header>
           <Card.Body>
             {viewport.inlineSize} x {viewport.blockSize}
@@ -72,7 +75,7 @@ function RouteComponent() {
 
         <Card.Root>
           <Card.Header>
-            <Scan strokeWidth={2.25} />
+            <RotateCcwSquare strokeWidth={2.25} />
             ORIENTATION
           </Card.Header>
           <Card.Body>
