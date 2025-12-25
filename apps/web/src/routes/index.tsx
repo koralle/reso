@@ -3,12 +3,21 @@ import { Monitor, Palette, Pointer, Scan } from "lucide-react";
 import type { HTMLProps, ReactNode } from "react";
 import { css } from "../../styled-system/css";
 import { Card } from "../components/card/card.recipe";
+import { useDevicePixelRatio } from "../hooks/use-device-pixel-ratio";
+import { useScreenOrientation } from "../hooks/use-screen-orientation";
+import { useScreenSize } from "../hooks/use-screen-size";
+import { useViewportSize } from "../hooks/use-viewport-size";
 
 export const Route = createFileRoute("/")({
   component: RouteComponent,
 });
 
 function RouteComponent() {
+  const devicePixelRatio = useDevicePixelRatio();
+  const viewport = useViewportSize();
+  const { inlineSize: screenInlineSize, blockSize: screenBlockSize } = useScreenSize();
+  const screenOrientation = useScreenOrientation();
+
   return (
     <div
       className={css({
@@ -22,7 +31,7 @@ function RouteComponent() {
       <MainContentContainer>
         <Card.Root>
           <Card.Header>PIXEL RATIO</Card.Header>
-          <Card.Body>{window.devicePixelRatio}</Card.Body>
+          <Card.Body>{devicePixelRatio}</Card.Body>
           <Card.Footer>devicePixelRatio</Card.Footer>
         </Card.Root>
 
@@ -32,7 +41,7 @@ function RouteComponent() {
             VIEWPORT
           </Card.Header>
           <Card.Body>
-            {window.innerWidth} x {window.innerHeight}
+            {viewport.inlineSize} x {viewport.blockSize}
           </Card.Body>
           <Card.Footer>innerWidth x innerHeight</Card.Footer>
         </Card.Root>
@@ -43,7 +52,7 @@ function RouteComponent() {
             SCREEN RESOLUTION
           </Card.Header>
           <Card.Body>
-            {window.screen.width} x {window.screen.height}
+            {screenInlineSize} x {screenBlockSize}
           </Card.Body>
           <Card.Footer>screen.width x screen.height</Card.Footer>
         </Card.Root>
@@ -67,7 +76,7 @@ function RouteComponent() {
             ORIENTATION
           </Card.Header>
           <Card.Body>
-            <span className={css({ fontSize: "1rem" })}>{screen.orientation.type}</span>
+            <span className={css({ fontSize: "1rem" })}>{screenOrientation}</span>
           </Card.Body>
           <Card.Footer>screen.orientation.type</Card.Footer>
         </Card.Root>
