@@ -11,6 +11,7 @@
       // TypeScript
       "src/**/*.{ts,tsx}",
       "vite.config.ts",
+      "panda.config.ts",
       "worker-configuration.d.ts",
 
       // JSON
