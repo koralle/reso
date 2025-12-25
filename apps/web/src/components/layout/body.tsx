@@ -9,7 +9,7 @@ interface BodyProps extends HTMLProps<"div"> {
 export function Body({ children }: Readonly<BodyProps>) {
   return (
     <main id="main" className={center({ flex: "1", inlineSize: "full" })}>
-      <div className={css({ inlineSize: "min(960px, 100%)" })}>{children}</div>
+      <div className={css({ inlineSize: "min(960px, 100%)", py: 10 })}>{children}</div>
     </main>
   );
 }

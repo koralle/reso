@@ -1,4 +1,4 @@
-import { Github } from "lucide-react";
+import { Github, MonitorSmartphone } from "lucide-react";
 import { css } from "../../../styled-system/css";
 import { center, hstack } from "../../../styled-system/patterns";
 
@@ -19,7 +19,8 @@ export function Header() {
           justifyContent: "space-between",
         })}
       >
-        <div className={hstack({})}>
+        <div className={hstack({ gap: "8px" })}>
+          <MonitorSmartphone strokeWidth={2.25} />
           <span className={css({ fontWeight: "bold", fontSize: "1.5rem" })}>Reso</span>
         </div>
 
