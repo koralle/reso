@@ -1,45 +1,39 @@
 pre-commit:
-  parallel: true
+  piped: true
   jobs:
-    - name: web
-      group:
-        piped: true
-        jobs:
-          - name: Fix with Biome (Web)
-            root: apps/web
-            glob:
-              # Typescript
-              - '**/*.ts'
-              - '**/*.tsx'
-              - vite.config.ts
-              - worker-configuration.d.ts
+    - name: Fix with Biome
+      glob:
+        # Typescript
+        - "**/*.ts"
+        - "**/*.tsx"
+        - vite.config.ts
+        - worker-configuration.d.ts
 
-              # JSON
-              - package.json
-              - tsconfig.json
-              - biome.jsonc
-              - wrangler.jsonc
-              - '.vscode/settings.json'
+        # JSON
+        - package.json
+        - tsconfig.json
+        - biome.jsonc
+        - wrangler.jsonc
+        - ".vscode/settings.json"
 
-              # CSS
-              - 'src/**/*.css'
+        # CSS
+        - "src/**/*.css"
 
-            run: |
-              bun biome check \
-                {staged_files} \
-                --fix
-            stage_fixed: true
+      run: |
+        bun biome check \
+          {staged_files} \
+          --fix
+      stage_fixed: true
 
-          - name: Typecheck (Web)
-            root: apps/web
-            glob:
-              # Typescript
-              - '**/*.ts'
-              - '**/*.tsx'
-              - vite.config.ts
-              - worker-configuration.d.ts
+    - name: Typecheck
+      glob:
+        # Typescript
+        - "**/*.ts"
+        - "**/*.tsx"
+        - vite.config.ts
+        - worker-configuration.d.ts
 
-              # JSON
-              - tsconfig.json
-            run: |
-              bun tsgo
+        # JSON
+        - tsconfig.json
+      run: |
+        bun tsgo

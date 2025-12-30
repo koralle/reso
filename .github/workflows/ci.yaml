@@ -20,7 +20,6 @@ jobs:
         uses: ./.github/composite-actions/cache-and-install
 
       - name: Biome
-        working-directory: ./apps/web
         shell: bash
         run: |
           bun run check
@@ -36,7 +35,6 @@ jobs:
         uses: ./.github/composite-actions/cache-and-install
 
       - name: Typecheck
-        working-directory: ./apps/web
         shell: bash
         run: |
           bun run typecheck
