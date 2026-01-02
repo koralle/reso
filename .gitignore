@@ -24,7 +24,12 @@ dist-ssr
 !.dev.vars.example
 .env*
 !.env.example
+!.envrc
 
 # Panda
 styled-system
 styled-system-studio
+
+# direnv
+# https://github.com/direnv/direnv
+.direnv
