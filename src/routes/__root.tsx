@@ -17,6 +17,32 @@ function RootLayout() {
   return (
     <>
       <div className={flex({ flexDir: "column", minInlineSize: "320px", minBlockSize: "100svb" })}>
+        <a
+          href="#main"
+          className={css({
+            position: "absolute",
+            insetInlineStart: "-9999px",
+            inlineSize: "1px",
+            blockSize: "1px",
+            overflow: "hidden",
+            _focus: {
+              position: "fixed",
+              insetBlockStart: "8px",
+              insetInlineStart: "8px",
+              inlineSize: "auto",
+              blockSize: "auto",
+              overflow: "visible",
+              padding: "12px 24px",
+              backgroundColor: "oklch(21% 0.034 264.665)",
+              color: "white",
+              fontWeight: "bold",
+              rounded: "8px",
+              zIndex: 9999,
+            },
+          })}
+        >
+          メインコンテンツへスキップ
+        </a>
         <Header />
         <Body>
           <Outlet />

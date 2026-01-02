@@ -31,7 +31,7 @@ function RouteComponent() {
       <MainContentContainer>
         <Card.Root>
           <Card.Header>
-            <Ratio strokeWidth={2.25} />
+            <Ratio strokeWidth={2.25} aria-hidden="true" />
             PIXEL RATIO
           </Card.Header>
           <Card.Body>{devicePixelRatio}</Card.Body>
@@ -40,7 +40,7 @@ function RouteComponent() {
 
         <Card.Root>
           <Card.Header>
-            <Scan strokeWidth={2.25} />
+            <Scan strokeWidth={2.25} aria-hidden="true" />
             <span className={css({ color: "primary" })}>VIEWPORT</span>
           </Card.Header>
           <Card.Body>
@@ -51,7 +51,7 @@ function RouteComponent() {
 
         <Card.Root>
           <Card.Header>
-            <Monitor strokeWidth={2.25} />
+            <Monitor strokeWidth={2.25} aria-hidden="true" />
             SCREEN RESOLUTION
           </Card.Header>
           <Card.Body>
@@ -64,7 +64,7 @@ function RouteComponent() {
       <SubContentContainer>
         <Card.Root>
           <Card.Header>
-            <Palette strokeWidth={2.25} />
+            <Palette strokeWidth={2.25} aria-hidden="true" />
             COLOR DEPTH
           </Card.Header>
           <Card.Body>
@@ -75,7 +75,7 @@ function RouteComponent() {
 
         <Card.Root>
           <Card.Header>
-            <RotateCcwSquare strokeWidth={2.25} />
+            <RotateCcwSquare strokeWidth={2.25} aria-hidden="true" />
             ORIENTATION
           </Card.Header>
           <Card.Body>
@@ -86,7 +86,7 @@ function RouteComponent() {
 
         <Card.Root>
           <Card.Header>
-            <Pointer strokeWidth={2.25} />
+            <Pointer strokeWidth={2.25} aria-hidden="true" />
             TOUCH POINTS
           </Card.Header>
           <Card.Body>

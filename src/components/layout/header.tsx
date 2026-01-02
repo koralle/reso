@@ -20,7 +20,7 @@ export function Header() {
         })}
       >
         <div className={hstack({ gap: "8px" })}>
-          <MonitorSmartphone strokeWidth={2.25} />
+          <MonitorSmartphone strokeWidth={2.25} aria-hidden="true" />
           <span className={css({ fontWeight: "bold", fontSize: "1.5rem" })}>Reso</span>
         </div>
 
@@ -28,7 +28,8 @@ export function Header() {
           <a
             href="https://github.com/koralle/reso"
             target="_blank"
-            rel="noreferrer"
+            rel="noopener noreferrer"
+            aria-label="GitHub リポジトリを開く"
             className={css({
               display: "inline flex",
               justifyContent: "center",
@@ -43,7 +44,7 @@ export function Header() {
               },
             })}
           >
-            <Github />
+            <Github aria-hidden="true" />
           </a>
         </div>
       </div>
